@@ -64,7 +64,7 @@ docker run -d -it --restart=always \
 --stake stakeamount \
 
 
-$ docker pull kyve/celo:latest && \
+docker pull kyve/celo:latest && \
 docker stop kyve-celo-node 2>/dev/null; \
 docker container rm kyve-celo-node 2>/dev/null; \
 docker run -d -it --restart=always \
@@ -74,7 +74,7 @@ docker run -d -it --restart=always \
 --stake stakeamount \
 
 
-$ docker pull kyve/solana-snapshots:latest && \
+ docker pull kyve/solana-snapshots:latest && \
 docker stop kyve-solana-node 2>/dev/null; \
 docker container rm kyve-solana-node 2>/dev/null; \
 docker run -d -it --restart=always \
