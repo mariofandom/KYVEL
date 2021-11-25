@@ -23,16 +23,23 @@ else
 fi
 
 sudo apt-get update && sudo apt-get upgrade -y
+curl https://deb.nodesource.com/setup_16.x | sudo bash
+sudo apt install -y nodejs gcc g++ make git < "/dev/null"
+
 sudo apt-get install curl gnupg apt-transport-https ca-certificates \
 lsb-release -y && curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
 | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg && \
 echo "deb [arch=$(dpkg --print-architecture) \
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
+echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \
 https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
 | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null && \
 sudo apt-get update && \
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 sudo systemctl start docker && sudo systemctl enable docker
+curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
 
 docker pull kyve/evm:v0.0.11 && \
 docker stop kyve-avalanche-node 2>/dev/null; \
