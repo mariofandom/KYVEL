@@ -39,7 +39,7 @@ docker stop kyve-avalanche-node 2>/dev/null; \
 docker container rm kyve-avalanche-node 2>/dev/null; \
 docker run -d -it --restart=always \
 --name kyve-avalanche-node kyve/evm:v0.0.11 \
---pool 0xd1EAe9CC4C0cC8D82c5800e2dAE972A70f2C4d0d \
+--pool 0x464200b29738367366FDb4c45f3b8fb582AE0Bf8 \
 --private-key key \
 --stake stakeamount \
 -e https://rpc.testnet.moonbeam.network
@@ -49,20 +49,20 @@ docker stop kyve-moonriver-node 2>/dev/null; \
 docker container rm kyve-moonriver-node 2>/dev/null; \
 docker run -d -it --restart=always \
 --name kyve-moonriver-node kyve/evm:v0.0.11 \
---pool 0x5A679d476757C18Ec49dfB6c3c3511c8E8a76906 \
+--pool 0x610D55fA573Bce4D2d36e8ADAAee517B785a69dF \
 --private-key key \
 --stake stakeamount \
--e https://rpc.testnet.moonbeam.network
+
 
 docker pull kyve/cosmos:v0.0.0 && \
 docker stop kyve-cosmos-node 2>/dev/null; \
 docker container rm kyve-cosmos-node 2>/dev/null; \
 docker run -d -it --restart=always \
 --name kyve-cosmos-node kyve/cosmos:v0.0.0 \
---pool 0x83748889798a93e4a816a6a9D2ecD40377D5530B \
+--pool 0x7Bb18C81BBA6B8dE8C17B97d78B65327024F681f \
 --private-key key \
 --stake stakeamount \
--e https://rpc.testnet.moonbeam.network
+
 
 $ docker pull kyve/celo:latest && \
 docker stop kyve-celo-node 2>/dev/null; \
@@ -72,7 +72,7 @@ docker run -d -it --restart=always \
 --pool 0x1588fd93715Aa08d67c32C6dF96fC730B15E1E1A \
 --private-key key \
 --stake stakeamount \
--e https://rpc.testnet.moonbeam.network
+
 
 $ docker pull kyve/solana-snapshots:latest && \
 docker stop kyve-solana-node 2>/dev/null; \
@@ -82,7 +82,7 @@ docker run -d -it --restart=always \
 --pool 0x3124375cA4de5FE5afD672EF2775c6bdcA1Cfdcc \
 --private-key key \
 --stake stakeamount \
--e https://rpc.testnet.moonbeam.network
+
 
 
 
