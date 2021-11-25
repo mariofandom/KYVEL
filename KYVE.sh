@@ -64,6 +64,41 @@ docker run -d -it --restart=always \
 --stake stakeamount \
 -e https://rpc.testnet.moonbeam.network
 
+$ docker pull kyve/celo:latest && \
+docker stop kyve-celo-node 2>/dev/null; \
+docker container rm kyve-celo-node 2>/dev/null; \
+docker run -d -it --restart=always \
+--name kyve-celo-node kyve/celo:latest \
+--pool 0x1588fd93715Aa08d67c32C6dF96fC730B15E1E1A \
+--private-key key \
+--stake stakeamount \
+-e https://rpc.testnet.moonbeam.network
+
+$ docker pull kyve/solana-snapshots:latest && \
+docker stop kyve-solana-node 2>/dev/null; \
+docker container rm kyve-solana-node 2>/dev/null; \
+docker run -d -it --restart=always \
+--name kyve-solana-node kyve/solana-snapshots:latest \
+--pool 0x3124375cA4de5FE5afD672EF2775c6bdcA1Cfdcc \
+--private-key key \
+--stake stakeamount \
+-e https://rpc.testnet.moonbeam.network
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
