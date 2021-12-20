@@ -35,9 +35,9 @@ https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
 | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null && \
 sudo apt-get update && \
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
-sudo systemctl start docker && sudo systemctl enable docker
-curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
 
+curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
+sudo systemctl start docker && sudo systemctl enable docker
 
 
 docker pull kyve/evm:latest && \
