@@ -45,7 +45,7 @@ docker stop kyve-avalanche-node 2>/dev/null; \
 docker container rm kyve-avalanche-node 2>/dev/null; \
 docker run -d -it --restart=always \
 --name kyve-avalanche-node kyve/evm:latest \
---pool 0x464200b29738367366FDb4c45f3b8fb582AE0Bf8 
+--pool 0x464200b29738367366FDb4c45f3b8fb582AE0Bf8 \
 --private-key key \
 --stake stakeamount \
 
@@ -55,7 +55,7 @@ docker stop kyve-moonriver-node 2>/dev/null; \
 docker container rm kyve-moonriver-node 2>/dev/null; \
 docker run -d -it --restart=always \
 --name kyve-moonriver-node kyve/evm:latest \
---pool 0x610D55fA573Bce4D2d36e8ADAAee517B785a69dF
+--pool 0x610D55fA573Bce4D2d36e8ADAAee517B785a69dF \
 --private-key key \
 --stake stakeamount \
 
@@ -112,7 +112,7 @@ docker stop kyve-evmos_tendermint-node 2>/dev/null; \
 docker container rm kyve-evmos_tendermint-node 2>/dev/null; \
 docker run -d -it --restart=always \
 --name kyve-evmos_tendermint-node kyve/cosmos:latest \
---pool 0xAa3337d1f8F72D544f3843B2089d2DA02BBcbD28 
+--pool 0xAa3337d1f8F72D544f3843B2089d2DA02BBcbD28 \
 --private-key key \
 --stake stakeamount \
 
