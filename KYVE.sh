@@ -49,7 +49,6 @@ docker run -d -it --restart=always \
 --private-key key \
 --stake stakeamount \
 
-
 docker pull kyve/evm:latest && \
 docker stop kyve-moonriver-node 2>/dev/null; \
 docker container rm kyve-moonriver-node 2>/dev/null; \
@@ -79,22 +78,12 @@ docker run -d -it --restart=always \
 --private-key key \
 --stake stakeamount \
 
-
- docker pull kyve/solana-snapshots:latest && \
+docker pull kyve/solana-snapshots:latest && \
 docker stop kyve-solana-node 2>/dev/null; \
 docker container rm kyve-solana-node 2>/dev/null; \
 docker run -d -it --restart=always \
 --name kyve-solana-node kyve/solana-snapshots:latest \
 --pool 0x3124375cA4de5FE5afD672EF2775c6bdcA1Cfdcc \
---private-key key \
---stake stakeamount \
-
-docker pull kyve/celo:latest && \
-docker stop kyve-celo-node 2>/dev/null; \
-docker container rm kyve-celo-node 2>/dev/null; \
-docker run -d -it --restart=always \
---name kyve-celo-node kyve/celo:latest \
---pool 0x1588fd93715Aa08d67c32C6dF96fC730B15E1E1A \
 --private-key key \
 --stake stakeamount \
 
@@ -115,6 +104,7 @@ docker run -d -it --restart=always \
 --pool 0xAa3337d1f8F72D544f3843B2089d2DA02BBcbD28 \
 --private-key key \
 --stake stakeamount \
+
 
 
 
