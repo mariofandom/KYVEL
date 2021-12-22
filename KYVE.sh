@@ -105,7 +105,14 @@ docker run -d -it --restart=always \
 --private-key $key \
 --stake $stakeamount \
 
-
+docker pull kyve/evm-snapshots:latest && \
+docker stop kyve-aurora-node 2>/dev/null; \
+docker container rm kyve-aurora-node 2>/dev/null; \
+docker run -d -it --restart=always \
+--name kyve-aurora-node kyve/evm-snapshots:latest \
+--pool 0x5C3ea1634E97F44b592524616F4b158D569DF920 \
+--private-key $key \
+--stake $stakeamount \
 
 
 
