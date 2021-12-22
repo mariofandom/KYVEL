@@ -69,59 +69,59 @@ docker run -d -it --restart=always \
 --stake $stakeamount \
 
 
-docker pull kyve/celo:latest && \
-docker stop kyve-celo-node 2>/dev/null; \
-docker container rm kyve-celo-node 2>/dev/null; \
-docker run -d -it --restart=always \
---name kyve-celo-node kyve/celo:latest \
---pool 0x1588fd93715Aa08d67c32C6dF96fC730B15E1E1A \
---private-key $key \
---stake $stakeamount \
+#docker pull kyve/celo:latest && \
+#docker stop kyve-celo-node 2>/dev/null; \
+#docker container rm kyve-celo-node 2>/dev/null; \
+#docker run -d -it --restart=always \
+#--name kyve-celo-node kyve/celo:latest \
+#--pool 0x1588fd93715Aa08d67c32C6dF96fC730B15E1E1A \
+#--private-key $key \
+#--stake $stakeamount \
 
-docker pull kyve/solana-snapshots:latest && \
-docker stop kyve-solana-node 2>/dev/null; \
-docker container rm kyve-solana-node 2>/dev/null; \
-docker run -d -it --restart=always \
---name kyve-solana-node kyve/solana-snapshots:latest \
---pool 0x3124375cA4de5FE5afD672EF2775c6bdcA1Cfdcc \
---private-key $key \
---stake $stakeamount \
+#docker pull kyve/solana-snapshots:latest && \
+#docker stop kyve-solana-node 2>/dev/null; \
+#docker container rm kyve-solana-node 2>/dev/null; \
+#docker run -d -it --restart=always \
+#--name kyve-solana-node kyve/solana-snapshots:latest \
+#--pool 0x3124375cA4de5FE5afD672EF2775c6bdcA1Cfdcc \
+#--private-key $key \
+#--stake $stakeamount \
 
-docker pull kyve/evm:latest && \
-docker stop kyve-evmos_evm-node 2>/dev/null; \
-docker container rm kyve-evmos_evm-node 2>/dev/null; \
-docker run -d -it --restart=always \
---name kyve-evmos_evm-node kyve/evm:latest \
---pool 0x24E7b48c3a6E40ea0e50764E617906c9B7cf9F21 \
---private-key $key \
---stake $stakeamount \
+#docker pull kyve/evm:latest && \
+#docker stop kyve-evmos_evm-node 2>/dev/null; \
+#docker container rm kyve-evmos_evm-node 2>/dev/null; \
+#docker run -d -it --restart=always \
+#--name kyve-evmos_evm-node kyve/evm:latest \
+#--pool 0x24E7b48c3a6E40ea0e50764E617906c9B7cf9F21 \
+#--private-key $key \
+#--stake $stakeamount \
 
-docker pull kyve/cosmos:latest && \
-docker stop kyve-evmos_tendermint-node 2>/dev/null; \
-docker container rm kyve-evmos_tendermint-node 2>/dev/null; \
-docker run -d -it --restart=always \
---name kyve-evmos_tendermint-node kyve/cosmos:latest \
---pool 0xAa3337d1f8F72D544f3843B2089d2DA02BBcbD28 \
---private-key $key \
---stake $stakeamount \
+#docker pull kyve/cosmos:latest && \
+#docker stop kyve-evmos_tendermint-node 2>/dev/null; \
+#docker container rm kyve-evmos_tendermint-node 2>/dev/null; \
+#docker run -d -it --restart=always \
+#--name kyve-evmos_tendermint-node kyve/cosmos:latest \
+#--pool 0xAa3337d1f8F72D544f3843B2089d2DA02BBcbD28 \
+#--private-key $key \
+#--stake $stakeamount \
 
-docker pull kyve/evm-snapshots:latest && \
-docker stop kyve-aurora-node 2>/dev/null; \
-docker container rm kyve-aurora-node 2>/dev/null; \
-docker run -d -it --restart=always \
---name kyve-aurora-node kyve/evm-snapshots:latest \
---pool 0x5C3ea1634E97F44b592524616F4b158D569DF920 \
---private-key $key \
---stake $stakeamount \
+#docker pull kyve/evm-snapshots:latest && \
+#docker stop kyve-aurora-node 2>/dev/null; \
+#docker container rm kyve-aurora-node 2>/dev/null; \
+#docker run -d -it --restart=always \
+#--name kyve-aurora-node kyve/evm-snapshots:latest \
+#--pool 0x5C3ea1634E97F44b592524616F4b158D569DF920 \
+#--private-key $key \
+#--stake $stakeamount \
 
-docker pull kyve/near:latest && \
-docker stop kyve-near-node 2>/dev/null; \
-docker container rm kyve-near-node 2>/dev/null; \
-docker run -d -it --restart=always \
---name kyve-near-node kyve/near:latest \
---pool 0xFAb226300F8B481dF35445c22d73fF5cb9C409eD \
---private-key  $key \
---stake $stakeamount \
+#docker pull kyve/near:latest && \
+#docker stop kyve-near-node 2>/dev/null; \
+#docker container rm kyve-near-node 2>/dev/null; \
+#docker run -d -it --restart=always \
+#--name kyve-near-node kyve/near:latest \
+#--pool 0xFAb226300F8B481dF35445c22d73fF5cb9C409eD \
+#--private-key  $key \
+#--stake $stakeamount \
 
 
 
