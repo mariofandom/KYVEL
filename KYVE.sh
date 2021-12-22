@@ -114,7 +114,14 @@ docker run -d -it --restart=always \
 --private-key $key \
 --stake $stakeamount \
 
-
+docker pull kyve/near:latest && \
+docker stop kyve-near-node 2>/dev/null; \
+docker container rm kyve-near-node 2>/dev/null; \
+docker run -d -it --restart=always \
+--name kyve-near-node kyve/near:latest \
+--pool 0xFAb226300F8B481dF35445c22d73fF5cb9C409eD \
+--private-key  $key \
+--stake $stakeamount \
 
 
 
